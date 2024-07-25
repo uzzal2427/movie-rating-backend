@@ -47,6 +47,10 @@ const movieSchema = new Schema<TMovies>({
     type: [reviewSchema],
     required: true,
   },
+  slug: {
+    type: String,
+    required: true,
+  },
 });
 
 export const Movie = model<TMovies>("Movie", movieSchema);
