@@ -7,7 +7,7 @@ const createMovies = async (payLoad: TMovies) => {
   // create slug to fine specific movie in a secure way with slugify .
 
   const slug = slugify(`${payLoad.title}-${payLoad.genre}`, { lower: true });
-  // console.log(slug, "new slug");
+  console.log(slug, "new slug");
   const result = await Movie.create({ ...payLoad, slug });
   // console.log(result);
   return result;
